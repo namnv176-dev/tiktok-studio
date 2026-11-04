@@ -14,6 +14,8 @@ Kênh: @thichmacdodep555 — cập nhật ngày 28/10/2026.
 
 - [ ] Bài 01: đăng nhập Shopee trên Chrome (Shopee bắt đăng nhập mới cho tìm kiếm, Lazada bật kiểm tra robot) để Claude lấy ảnh sản phẩm + giá thật cho từng món. Ảnh người mẫu minh họa đã có ở `anh/bai-01/` (29/10/2026).
 
+- [ ] Bài 03 (`bai-03-an-cuoi-chanh-xa.md`): mở nháp trong TikTok Studio → Posts → Drafts (biểu tượng bút chì), chọn nhạc rồi đăng/lên lịch. Nháp hết hạn 03/01/2027.
+
 ## Đã xong
 - [x] Tiểu sử (28/10/2026):
   ```

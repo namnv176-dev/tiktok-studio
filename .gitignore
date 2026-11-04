@@ -1,4 +1,26 @@
+# bí mật / cấu hình cục bộ
 .env
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# dữ liệu và thư mục ảnh làm việc
+data/
+anh/
+generated/
+tiktok-studio/
+.agents/
+.claude/skills/gemini-watermark-remover
+skills-lock.json
+
+# cache
 __pycache__/
 *.pyc
 .DS_Store
+
+# ảnh: loại hết, chỉ giữ ảnh trong ref/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+!/ref/**
