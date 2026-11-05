@@ -1,0 +1,35 @@
+# Nền chụp outfit: quán cà phê hiện đại (prompt cho `agy` / Gemini)
+
+Lệnh: `python3 scripts/build_bg_prompt.py --set cafe-hien-dai --scene <tên>`. Ảnh lưu `ref/background_empty_<tên>.jpg`. Tiêu chí nền giống `background-checkin.md`: đứng sát tường, ảnh thật như ảnh iPhone. Chỉ chọn quán mới, tối giản, kiểu giới trẻ thành phố đang lui tới. Quán chỉ là phần phụ; nền chính là các điểm check-in và góc phố.
+
+## Tóm tắt nghiên cứu
+**6 kiểu quán hiện đại đang được check-in nhiều:**
+1. **Quán kiểu Hàn tông trắng–be.** Ở Hà Nội: Kone Café (trắng, nội thất be, rooftop), Monocle (trắng be), Hello Stranger (trắng, điểm gỗ nâu, nhiều cây, nắng tự nhiên), Simee (trắng, nhiều cửa sổ, ban công), Beigic ("như studio Hàn"), Chingu. Ở Sài Gòn: MYS (Q7, tông trắng, **tường gương**). Đặc điểm chung: trắng, be, gỗ sáng, cửa sổ lớn, đèn vàng dịu, cây xanh, có góc decor sẵn để chụp.
+2. **Specialty coffee bê tông + kính.** Bosgaurus Coffee Roasters (Bình Thạnh, tông trắng bên sông): quầy bar bê tông nguyên khối, kính **không khung** cao từ sàn tới trần, ghế inox mảnh, giếng trời, đèn 4000K. RuNam ở phố Nhà Thờ cũng thuộc kiểu này.
+3. **Chuỗi hiện đại kiểu Katinat.** Bê tông, **tường gạch kính** (glass block) hắt bóng mềm, sàn và mặt bàn **terrazzo** đốm màu nhạt, quầy inox cong, ghế băng bo cong màu mocha / quế / nâu thuốc lá, cầu thang inox xoắn, gương bầu dục viền đồng, cửa kính cao hai tầng.
+4. **Quán tông trắng có sân trước.** Half n Half Coffee (Thủ Đức): hai tầng, trắng, tối giản, sân trước rộng nhiều cây. Hoff Coffee Brewers (Q1): trắng kết hợp gỗ, có lửng, ban công nhiều cây nhìn ra đường. Đứng trước cửa quán là kiểu ảnh outfit rất phổ biến.
+5. **Gỗ sáng tối giản kiểu Nhật.** Gỗ sồi sáng, tường trắng, lửng, ánh sáng tự nhiên, ít đồ. O Plant-based Café (Thảo Điền) đi theo hướng "bớt đi": vườn, sân, ban công, gỗ.
+6. **Rooftop hiện đại nhìn ra thành phố.** D Chill (tầng 15, Q1: hiện đại, view toàn cảnh), Trăng Non (ngắm hoàng hôn, thấy Landmark 81 và cầu Sài Gòn), Kone (rooftop).
+
+**Giữ cho ảnh thật mà vẫn hiện đại:** không dùng vết cũ kiểu tróc sơn hay nứt tường. Thay bằng dấu vết của một quán mới đang mở bán thật: dấu tay trên kính, kính phản chiếu phố, vài vết xước nhẹ trên sàn bê tông, ly đá uống dở còn đọng nước, dây sạc cắm ổ điện, hộp giấy ăn, ghế kéo lệch, máy lạnh treo tường. Ảnh phải giống ảnh điện thoại chụp hộ, không giống ảnh kiến trúc chụp cho tạp chí.
+
+Nguồn: mytour.vn (13 quán cafe phong cách Hàn ở Hà Nội), vietcetera.com (5 quán cafe mới mở đông khách nhất ở Sài Gòn), vincom.com.vn (quán cà phê mới mở ở Sài Gòn), uni.xyz (Bosgaurus Coffee Roasters, NU architecture & design), metropolismag.com (Katinat Café, HCMC), archdaily.com (O Plant-based Thao Dien Cafe / xưởng xép), greensm.com và toplist.vn (cafe rooftop Sài Gòn).
+
+## RULES
+COMPOSITION, the most important rule, because this is a backdrop for an outfit photo: the camera faces the backdrop almost straight on from about 3 meters away. The backdrop (a wall, a door, a mirror or a glass facade) stands close behind the spot where a woman will later be placed, only about 0.5 to 1 meter behind her, and it fills most of the frame like a portrait backdrop. There is very little depth behind the spot: no deep room, no long aisle of tables behind it. Only the left and right edges of the frame show a little of the rest of the cafe. The floor is visible down to the bottom of the frame, with an empty spot in the center where she can stand head to toe with her feet fully visible. PHOTO: an ordinary, real, unedited iPhone snapshot taken by a friend, hand-held at chest height, vertical 9:16. Not a render, not CGI, not an interior-design magazine photo, not a stock photo. Casual framing with a barely noticeable tilt, natural phone exposure with slightly bright highlights on glass and windows, mild noise in the shadows, white balance a little warm from indoor lights mixed with daylight. This is a NEW, modern cafe open for business, so the realism comes from everyday use, not from age: faint fingerprints on glass, light scuffs on the floor, a chair pulled out at an angle, a half-finished iced drink with condensation on a table at the edge, a tissue box, a charger cable plugged into an outlet, a wall-mounted air conditioner, real slightly uneven potted plants. At most one or two customers far away at the very edge of the frame, small and partly cut off, not looking at the camera; nobody in the center, nobody near the spot, nobody reflected in mirrors. No readable text, no logos, no brand names, no menu boards. One single photo, no collage, no border, no watermark.
+
+## cafe-han-trang
+A Korean-style minimalist cafe in Hanoi, on the second floor. A close view of a smooth plain warm-white wall with a long low light-oak bench along it and a couple of beige linen cushions. At the left edge, part of a large window with a sheer linen curtain letting in soft daylight; at the right edge, a tall potted olive tree and the corner of a light-wood table with a vase of fresh flowers and an iced latte. A soft warm pendant light hangs at the top edge. Light oak floor. The spot is on the floor in front of the bench, against the white wall.
+Dáng hợp: lean-wall, hand-in-hair, seated-chair
+
+## cafe-han-guong
+A white Korean-style cafe in Saigon. A close view of a plain warm-white wall with a large full-length arched mirror mounted on it, thin light-wood frame. The camera faces the mirror at a slight angle from about 2.5 meters. In the mirror: a little of the bright cafe behind the camera (light-wood tables, cream chairs, a plant, a window), but no person and no phone. A small round side table with a vase of fresh flowers beside the mirror, light oak floor, soft daylight plus one warm wall light. The floor in front of the mirror is open.
+Dáng hợp: mirror-classic, mirror-side-angle, mirror-phone-face
+
+## cafe-gach-kinh
+A modern Saigon cafe on the ground floor. A close view of a large wall of clear glass blocks that lets in diffused daylight and glows softly, with rippled light; a pale speckled terrazzo floor in front. At one edge, the end of a curved built-in banquette upholstered in mocha brown with a terrazzo side table and an iced coffee; at the other edge, a rounded raw concrete column. Warm and coffee-toned. The spot is on the terrazzo floor in front of the glass-block wall.
+Dáng hợp: lean-wall, hand-in-hair, over-shoulder
+
+## cafe-mat-tien-trang
+The front of a new white minimalist cafe on a quiet residential street in Thu Duc, Saigon. A close view of the clean white rendered facade with a large black-framed glass door and window; the warm interior is softly visible through the glass with reflections of the street. In front, a light grey paving-stone strip and one big potted plant beside the door. At the edges: a light-wood outdoor table with a drink, a frangipani branch at the top, a parked motorbike and overhead power lines at the far edge, a passerby far away. Late-morning sun. The spot is on the paving in front of the glass door.
+Dáng hợp: walk-toward, over-shoulder, lean-wall

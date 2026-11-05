@@ -59,6 +59,20 @@ Với mỗi `<index>` cần làm, dùng Read mở ảnh quần áo gốc rồi:
    - Chrome của người dùng hỏi vị trí lưu từng tệp nên mở hộp thoại Save as của hệ điều hành mà agent không bấm được. Không sao: `collect` chép từ file tạm `~/Downloads/.com.google.Chrome.XXXX`. Cuối lượt nhắc người dùng đóng các hộp thoại đó (Cancel).
 8. **Kiểm tra:** Read ảnh đã lưu. So với ảnh mẫu (mặt), ảnh váy (dáng, độ dài, chi tiết) và **ảnh cận (chất liệu: bóng hay lì, mềm hay cứng, xuyên sáng hay đặc)**, và căn phòng. Lệch rõ thì ghi "cần gen lại", không tự gen lại quá một lần mỗi ảnh. Lỗi hay gặp: tự thêm đường xẻ, đổi vị trí tay hoặc vai (ảnh selfie gương có thể lật trái phải, chấp nhận được), vải sai bóng/lì. Sửa bằng cách tả kỹ hơn trong `--garment`, không sửa file mẫu.
 
+## Biến thể: 1 ảnh 9:16 lưới 4 ô (4 dáng, 4 góc máy)
+- Mẫu `prompts/cloth-change-grid4.md`; bộ 4 ô theo từng nền trong `prompts/grid4-panels.md` (mỗi nền một mục `## <tên>`, dáng bám vào cửa/cột/chậu của nền đó). Ghép:
+  `python3 scripts/build_prompt.py --template cloth-change-grid4 --panels <nền> --fabric <vải> --garment "..." --accessories "..."`
+- Mỗi mẫu đồ mới cần nền riêng hợp hoàn cảnh: tạo nền trống trước (`build_bg_prompt.py`, lấy phần mô tả cảnh trong `Prompt: "..."` để gửi Gemini web), lưu `ref/background_empty_<nền>.jpg`.
+- **Cắt bỏ đầu người mẫu khỏi ảnh quần áo** (`anh/<bộ>/crop/<index>-noface.png`) rồi gửi bản đó làm ảnh 2. Lần đầu gửi ảnh còn mặt: 2/4 ô lấy luôn mặt và tóc đuôi ngựa của người mẫu shop, túi cũng bị chép dáng.
+- Phụ kiện tự chọn thì ghi rõ "NOT the bag from Image 2", vì Gemini hay chép túi trong ảnh quần áo.
+- Lưu `generated/<bộ>/<index>-grid4[-vN].png` bằng `collect - - --since <mốc> --to ...`, để không tính là đã làm ảnh đơn.
+- Kế hoạch từng ảnh (nền, vải, kiểu dáng, phụ kiện) ghi trong `generated/<bộ>/grid4-plan.json`; nền dùng chung cho 2 váy để tiết kiệm lượt Gemini.
+- **Nền tải về cũng có thể dính logo ✦** (thường là file PNG) hoặc bàn chân người chụp ở mép dưới: soi góc dưới phải trước khi dùng, có thì cắt bớt đáy, giữ tỉ lệ 9:16, lưu bản gốc ở `ref/raw/`.
+- Gemini vẫn hay chép **dáng túi hàng hiệu** trong ảnh quần áo (vd túi có mặt chữ treo) hoặc tự thêm logo lên túi chần bông. Muốn tránh thì tả túi thật khác dáng gốc.
+
+## Làm hook / upscale một ảnh có sẵn
+Người dùng chọn một ảnh hoặc một ô của ảnh lưới để làm hook, hay nhờ "scale lên": **không gen lại cảnh**. Cắt đúng ô đó (theo vạch trắng giữa các ô) ra `anh/<bộ>/crop/<index>-hook-ref.png`, mở chat Gemini mới, đính kèm **chỉ ảnh đó**, gửi prompt `prompts/upscale-keep.md` (một dòng). Tải về `generated/<bộ>/<index>-hook.png`, xóa logo vào `clean/`. Không tự sửa chi tiết trong ảnh.
+
 ## Bước 3: xóa logo Gemini
 Gemini đóng dấu logo ✦ ở góc dưới phải. CLAUDE.md cấm dùng ảnh còn watermark, nên xóa trước khi làm slide. Dùng skill `gemini-watermark-remover`, đầu ra `generated/<bộ>/clean/<index>.png` (giữ nguyên ảnh gốc).
 - Script của skill chạy `pnpm dlx @pilio/gemini-watermark-remover`, tức tải và chạy gói npm bên thứ ba. **Cần người dùng đồng ý** (hệ thống chặn nếu chưa cho phép).
