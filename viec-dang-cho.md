@@ -16,6 +16,8 @@ Kênh: @thichmacdodep555 — cập nhật ngày 28/10/2026.
 
 - [ ] Bài 03 (`bai-03-an-cuoi-chanh-xa.md`): mở nháp trong TikTok Studio → Posts → Drafts (biểu tượng bút chì), chọn nhạc rồi đăng/lên lịch. Nháp hết hạn 03/01/2027.
 
+- [ ] Bài 04 (`scenarios/wedding-vs-party.md`): nháp 9 ảnh đã lưu 12:49 05/11/2026. Mở TikTok Studio → Posts → Drafts, chọn nhạc rồi đăng/lên lịch. Nháp hết hạn 04/01/2027.
+
 ## Đã xong
 - [x] Tiểu sử (28/10/2026):
   ```
