@@ -21,7 +21,17 @@ ROOT = Path(__file__).resolve().parent.parent
 IMG_EXT = {".png", ".jpg", ".jpeg", ".webp"}
 DEFAULT_GARMENT = "cut, neckline, straps or sleeves, length, silhouette, color, pleats, ruching, ruffles and details"
 
-HEADER = """You must generate an image using your own image generation tool with reference images. Do not write code, do not call any external API, do not use run_command for this task, do not run any other command besides calling your image generation tool.
+ALLOWED_PLAIN = "calling your image generation tool"
+ALLOWED_ANALYZE = "using read_file on Image 2 and Image 3 below and calling your image generation tool"
+
+ANALYZE_STEP = """
+
+Before generating, use read_file to view Image 2 (Outfit) and Image 3 (Fabric close-up) and write concise English notes on: neckline; sleeves or straps; waist and fit; exact length relative to the body; color; fabric type, sheen, transparency and drape; notable details such as pleats, ruching, buttons, embroidery or trim. Describe only what you can actually see, and write "not visible" for anything you cannot see. Pass the prompt below to your image generation tool without changing it, and append your notes at its end after the label "GARMENT DETAILS:". If your notes ever conflict with Image 2 or Image 3, the images win."""
+
+FINISH_PLAIN = "Execute the generation immediately and return the absolute saved image path."
+FINISH_ANALYZE = "Generate as soon as your notes are done, then return your GARMENT DETAILS notes and the absolute saved image path."
+
+HEADER = """You must generate an image using your own image generation tool with reference images. Do not write code, do not call any external API, do not use run_command for this task, do not run any other command besides {allowed}.{analyze_step}
 
 Use AspectRatio: "9:16" (vertical portrait).
 ImageName: "{image_name}"
@@ -35,7 +45,7 @@ Reference image paths, in this exact order (pass all 4 to your tool's ImagePaths
 Prompt:
 "{body}"
 
-Execute the generation immediately and return the absolute saved image path."""
+{finish}"""
 
 
 def load_presets():
@@ -70,6 +80,7 @@ def main():
     ap.add_argument("--fabric", help="tên chất liệu trong prompts/fabric-presets.md")
     ap.add_argument("--garment", default=DEFAULT_GARMENT)
     ap.add_argument("--image-name", help="ImageName truyền cho agy, mặc định <bo>_<index>")
+    ap.add_argument("--no-analyze", action="store_true", help="bỏ bước model đọc ảnh và tự ghi chi tiết trang phục (dùng để so sánh)")
     ap.add_argument("--list", action="store_true", help="liệt kê chất liệu có sẵn")
     args = ap.parse_args()
 
@@ -96,6 +107,9 @@ def main():
     body = build_body(args.garment, presets[key])
 
     print(HEADER.format(
+        allowed=ALLOWED_PLAIN if args.no_analyze else ALLOWED_ANALYZE,
+        analyze_step="" if args.no_analyze else ANALYZE_STEP,
+        finish=FINISH_PLAIN if args.no_analyze else FINISH_ANALYZE,
         image_name=image_name,
         identity_path=identity_path,
         garment_path=garment_path,

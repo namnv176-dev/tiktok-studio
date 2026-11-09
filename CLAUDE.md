@@ -49,6 +49,23 @@ Skill `/gemini-thay-do <bộ>` (`.claude/skills/gemini-thay-do/SKILL.md`): với
 ## Workflow gen ảnh thay đồ (Antigravity CLI `agy`, Banana Pro)
 Skill `/agy-thay-do <bộ>` (`.claude/skills/agy-thay-do/SKILL.md`): đường đi song song không cần Chrome, gọi thẳng `agy -p ... --dangerously-skip-permissions` để agent của Antigravity tự `invoke_subagent` model "pro" (Banana Pro / "Nano Banana Pro"). Tool `generate_image` nội bộ của nó nhận **4 ảnh tham chiếu** như `gemini-thay-do` (người mẫu, quần áo, cận chất liệu, phòng trống) — đã test trực tiếp, không có giới hạn số ảnh nào được xác nhận. Prompt ghép bằng `scripts/build_agy_prompt.py` (dùng chung `prompts/cloth-change.md` + `prompts/fabric-presets.md`). Ảnh ra chỉ ~1K, không upscale được, không có logo ✦ nên không cần bước xóa watermark. Kết quả lưu `generated/<bộ>/<index>-banana-pro.jpg`. Chỉ chạy lệnh `--dangerously-skip-permissions` trong phiên chính (Claude), không đóng gói thành agent con riêng tự bật cờ này — đã thử và bị hệ thống chặn vì coi là tạo agent không an toàn.
 
+## Phân công model theo việc (chốt 09/11/2026)
+Mục tiêu: giữ quota tạo ảnh của `agy`. Việc ngoài tạo ảnh chỉ giao cho `agy` khi người dùng yêu cầu lần đó.
+
+| Việc | Giao cho | Trạng thái |
+|---|---|---|
+| Tạo ảnh thay đồ | `agy` subagent `pro` (`image-generator`); agent điều phối `--model gemini-3.8-flash-high` (người dùng chọn model lớn để mô tả ảnh sát yêu cầu) | Đã thử: tạo được lưới 4 ô từ 1 ảnh tham chiếu; chưa thử với ảnh quần áo thật |
+| Tìm web, đọc ảnh sản phẩm có sẵn trên máy | `agy --model claude-sonnet-5-5-low --mode plan`, chạy trong thư mục trống | Đã thử: đọc ảnh và `search_web` đều chạy |
+| Xác minh giá, lượt bán, ảnh trên Shopee/TikTok | Claude phiên chính + Chrome MCP | Quy trình hiện có, không tốn quota `agy` |
+| Duyệt web bằng `agy` (khi người dùng đã nối Chrome) | `agy --model claude-sonnet-5-5-low` | Chưa chạy được: chưa nối Chrome |
+| Ý kiến thứ hai về kịch bản (cần góc nhìn khác Claude) | `agy --model gemini-4-argon-medium` | Chưa thử; tốn quota tuần riêng của Argon, dùng ít |
+| Soát ảnh, tổng hợp, viết kịch bản | Claude phiên chính | Không tốn quota `agy` |
+
+Lưu ý khi gọi `agy`:
+- Luôn ghi rõ `--model`. Quota tạo ảnh chưa có dòng riêng trong `agy -p /usage`, nên chưa biết trừ vào nhóm nào.
+- Từ Git Bash, lệnh bắt đầu bằng `/` (vd `/browser`) phải đặt `MSYS_NO_PATHCONV=1`, nếu không sẽ bị đổi thành đường dẫn.
+- Link từ `search_web` là link chuyển hướng và số liệu chỉ từ đoạn trích, phải xác minh trước khi đưa vào bài.
+
 ## File trong dự án
 - `.env`: cấu hình do người dùng điền (Apify, từ khóa, bộ lọc, trình duyệt Chrome). **Không đọc, in hay ghi đè giá trị bí mật.** Muốn xem trạng thái thì chạy `python3 scripts/trends.py check`.
 - `huong-slideshow.md`: chiến lược nội dung (cấu trúc bài, 8 dạng bài, nguồn ảnh, chỉ số).
