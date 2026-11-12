@@ -125,7 +125,8 @@ Nhân vật giữ một vóc dáng: "Nếu Mùi mang mệnh Kim thì sẽ mặc 
 - Thổ: "Mệnh Thổ mặc nâu đi cưới mà không bị già: 3 công thức."
 - Tổng kết: "5 mệnh, 5 màu đào hoa. Lưu lại trước đám cưới tiếp theo."
 
-### Câu hỏi còn mở
-- Chọn cách dựng series nào (1, 2, 3 hay 4)?
-- Xử lý chỗ vướng với skill `tiktok-fashion-slides` theo hướng nào?
-- Nhân vật có mệnh cố định của riêng mình hay hóa thân theo từng mệnh?
+### Đã chốt (09/11/2026)
+Series đã lên kế hoạch ở `posts/di-cuoi-theo-menh/00-tong-quan.md`. Theo file đó nếu có chỗ khác với phần ý tưởng ở trên.
+- Cách dựng: mỗi mệnh một bài, thứ tự Thủy → Kim → Thổ → Mộc → Hỏa.
+- Skill `tiktok-fashion-slides`: giữ phong cách, thông tin mệnh viết nhẹ trên ảnh outfit, không có bảng tra. Riêng ảnh cuối có CTA.
+- Nhân vật hóa thân theo từng mệnh, không có mệnh cố định.

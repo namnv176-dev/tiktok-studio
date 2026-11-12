@@ -40,9 +40,9 @@ Với mỗi `<index>` cần làm:
 ## Bước 2: build prompt và gọi `agy`
 ```bash
 python3 scripts/build_agy_prompt.py --bo <bộ> --index <index> --fabric <tên> --garment "<tả>" > <scratchpad>/agy-prompt-<index>.txt
-agy -p "$(cat <scratchpad>/agy-prompt-<index>.txt)" --dangerously-skip-permissions --output-format text
+agy -p "$(cat <scratchpad>/agy-prompt-<index>.txt)" --model gemini-3.8-flash-high --dangerously-skip-permissions --output-format text
 ```
-(dùng đúng thư mục scratchpad của phiên hiện tại). Chạy ở thư mục gốc dự án (để `agy` nhận đúng workspace). Timeout hoặc lỗi thì chạy lại đúng lệnh đó **một lần** trước khi báo lỗi.
+(dùng đúng thư mục scratchpad của phiên hiện tại). Mặc định prompt có bước phân tích: model điều phối dùng `read_file` xem ảnh quần áo và ảnh cận chất liệu, tự ghi chi tiết (cổ, tay, độ dài, chất vải...) rồi nối vào prompt gửi Banana Pro; bước này tốn thêm quota. Thêm `--no-analyze` khi cần tạo ảnh đối chứng. Chạy ở thư mục gốc dự án (để `agy` nhận đúng workspace). Timeout hoặc lỗi thì chạy lại đúng lệnh đó **một lần** trước khi báo lỗi.
 
 ## Bước 3: lấy ảnh ra và lưu vào dự án
 Output của `agy` có dòng dạng "Absolute Path: `/home/.../antigravity-cli/brain/<convId>/<ImageName>_<timestamp>.jpg`". Lấy đường dẫn đó:

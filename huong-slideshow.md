@@ -61,6 +61,8 @@ Mẹo: trộn nguồn — ảnh bìa tham khảo Douyin, ảnh 2–8 là sản p
 
 Dạng nào lưu cao nhất → làm series (Phần 2, 3, 4…).
 
+**Định hướng (09/11/2026, sau Bài 04 đám cưới vs đi tiệc):** bài hút view tốt (>1k) nhưng không kéo được follower hay chuyển đổi. Để tăng follow, **thử dạng series kèm CTA ở ảnh cuối**, CTA nhắc đúng nội dung của tập sau. Đây là hướng thử, chưa kiểm chứng: Bài 04 không có CTA nên chưa đo được hiệu quả của CTA. Dạng nào thắng về view thì nhân bản thành series có nhận diện cố định. Chuyển đổi mua hàng tách riêng: dẫn khách bằng mã outfit kèm link ở bio (không để link Shopee, mã QR hay chữ "Shopee" trong ảnh, caption, bình luận), không nhét CTA bán hàng vào slide.
+
 ## 3 bài mẫu bắt đầu ngay
 1. "Gái Trung mặc gì đi làm mùa đông? 6 công thức dễ copy" — bìa collage 4 ô, ảnh 2–7 mỗi ảnh 1 công thức, cuối: "Lưu lại, mai mặc thử nha".
 2. "Dáng thấp dưới 1m55 đừng mặc 5 kiểu này, mặc thế này thay vào" — cặp ảnh ❌ / ✅.
