@@ -28,21 +28,21 @@ Mỗi mệnh vướng một luật ngầm khi đi cưới, nên mỗi tập tự
 | Ảnh | Vai trò | Vị trí chữ |
 |---|---|---|
 | 1 | Hook nêu luật ngầm, kèm nhãn nhỏ "Tập N · Đi Cưới Theo Mệnh" | Giữa dọc, tối đa 2 dòng |
-| 2 | Outfit 1, màu giải luật ngầm | Không chữ |
-| 3 | Outfit 2 | Không chữ |
-| 4 | Outfit 3 | Không chữ |
+| 2 | Outfit 1, màu giải luật ngầm | Trên cùng, 2 dòng: mã + màu + lý do theo mệnh / lý do theo dáng người |
+| 3 | Outfit 2 | Như ảnh 2 |
+| 4 | Outfit 3 | Như ảnh 2 |
 | 5 | Màu kỵ của mệnh: nhân vật mặc màu kỵ | Trên cùng, cách mép 150px |
 | 6 | CTA, nhắc luật ngầm của mệnh tập sau, nhân vật mặc màu đó | Giữa dọc |
 
 ## Quy tắc chung
-- **Ảnh outfit không để chữ**, vì ảnh chú thích giải thích thường bị chê quê. Chỉ ảnh hook và ảnh dạng phản đối, gợi ý, giải thích mới có chữ.
-- Ảnh 1080x1920, kiểu chữ theo skill `tiktok-fashion-slides` (serif, khung xám mờ). Caption một dòng, không tràn mép; dài quá thì rút ngắn.
+- **Ảnh outfit có 2 dòng chữ** (đổi ngày 13/11/2026, trước đó là không chữ): dòng 1 là mã outfit, màu và câu trả lời cho lời hứa ở hook (vì sao màu này hợp mệnh); dòng 2 là lý do mua theo dáng người. Lý do theo dáng người phải đúng với sản phẩm thật.
+- Ảnh 1080x1920, kiểu chữ theo skill `tiktok-fashion-slides` (serif, khung xám mờ). Mỗi dòng chữ không tràn mép; dài quá thì rút ngắn.
 - **Ngoại lệ của series:** có CTA ở ảnh cuối, khác quy tắc "không CTA" của skill. Ảnh CTA được nhiều hơn 2 dòng.
 - Không có ảnh bảng năm sinh hay infographic. Mệnh chỉ xuất hiện nhẹ trong chữ trên ảnh.
 - Nhân vật giữ nguyên vóc dáng, hóa thân theo mệnh của từng tập, không có mệnh cố định.
 - Mã outfit để trong caption, kèm "link ở bio". **Không để link Shopee, mã QR hay chữ "Shopee" trong ảnh, caption, bình luận.**
 - Chưa ghi giá trên ảnh. Khi ghi thì phải là giá thật lúc làm bài.
-- Caption ghi rõ xem mệnh cho vui, không hứa hẹn may mắn hay có người yêu.
+- Caption ghi rõ xem mệnh cho vui. Được nhắc chuyện có người yêu dưới dạng câu hỏi hoặc câu đùa (đổi ngày 13/11/2026), không viết thành lời cam kết, không hứa hẹn may mắn.
 
 ## Quy trình làm một tập
 1. Đối chiếu năm sinh của mệnh trong tập.

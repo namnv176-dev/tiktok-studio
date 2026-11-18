@@ -1,0 +1,15 @@
+# Scene sheet Video 07 (váy trắng mini, `anh-07`): gửi Gemini 2 ảnh, mỗi scene 1 chat mới
+
+Ảnh đính kèm (đúng thứ tự):
+1. `ref/model_identity.png` (nhận diện khuôn mặt)
+2. `generated/wedding-dress/clean/anh-07.png` (người + váy + phòng, giữ nguyên)
+
+## Scene 1 (0–10s): "đừng mặc đi cưới" → khoe váy
+```
+Create ONE single image that is a storyboard / scene sheet: 3 vertical 9:16 panels placed side by side in a row, separated by thin white lines, left to right = frame 1, 2, 3 of ONE continuous 10-second video. I attach 2 images: IMAGE 1 = identity reference of the woman, IMAGE 2 = the exact scene to reuse. In all 3 panels keep EXACTLY the same woman (face, freckles, long black wavy hair with middle part), the same white one-shoulder mini A-line dress (asymmetric draped neckline, fitted bodice, flared skater skirt to mid-thigh, same cream-white color and matte smooth fabric), the same nude heels, the same bedroom with the tall mirror, door, bed and window, the same warm soft daylight, the same iPhone-style realistic photo look, same camera distance, full body visible head to feet in every panel. Only her action changes, as a natural sequence: PANEL 1: she stands in front of the mirror taking a mirror selfie, white smartphone held up beside her face, other hand relaxed, soft smile. PANEL 2: she lowers the phone to her side, free hand resting on her thigh, head tilted, eyebrows slightly raised, playful look straight into the mirror as if saying "not for a wedding". PANEL 3: she turns her body to a three-quarter angle, one hand on her waist to show the fitted waist and the flare of the skirt, the other hand holding the phone down, confident smile. No text, no captions, no logos, no watermark, no numbering.
+```
+
+## Scene 2 (10–20s): váy xòe → CTA
+```
+Create ONE single image that is a storyboard / scene sheet: 3 vertical 9:16 panels placed side by side in a row, separated by thin white lines, left to right = frame 1, 2, 3 of ONE continuous 10-second video. I attach 2 images: IMAGE 1 = identity reference of the woman, IMAGE 2 = the exact scene to reuse. In all 3 panels keep EXACTLY the same woman (face, freckles, long black wavy hair with middle part), the same white one-shoulder mini A-line dress (asymmetric draped neckline, fitted bodice, flared skater skirt to mid-thigh, same cream-white color and matte smooth fabric), the same nude heels, the same bedroom with the tall mirror, door, bed and window, the same warm soft daylight, the same iPhone-style realistic photo look, same camera distance, full body visible head to feet in every panel. Only her action changes, as a natural sequence: PANEL 1: she stands facing the mirror, pinches the edge of the skirt hem with two fingers and lifts it slightly to show how it flares, smiling. PANEL 2: she does a gentle half twirl to the right, the skirt flaring out in motion, hair swinging softly, looking over her shoulder at the mirror. PANEL 3: she faces the mirror again, relaxed, one hand pointing gently downward toward the bottom of the frame, warm friendly smile. No text, no captions, no logos, no watermark, no numbering.
+```
